@@ -14,6 +14,29 @@
             },
             "problemMatcher": [],
             "isBackground": true
+        },
+        {
+            "label": "sphinx-pot",
+            "type": "shell",
+            "command": ".venv/Scripts/sphinx-build.exe -M gettext docs docs/_pot",
+            "options": {
+                "env": {
+                    "PATH": "${workspaceFolder}\\.venv\\Scripts;${env:PATH}"
+                }
+            },
+            "problemMatcher": [],
+        },
+        {
+            "label": "sphinx-po",
+            "type": "shell",
+            "command": "${workspaceFolder}/.venv/Scripts/sphinx-intl.exe update -p _pot/gettext -l en",
+            "options": {
+                "cwd": "${workspaceFolder}/docs",
+                "env": {
+                    "PATH": "${workspaceFolder}\\.venv\\Scripts;${env:PATH}"
+                }
+            },
+            "problemMatcher": [],
         }
     ]
 }

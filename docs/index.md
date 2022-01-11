@@ -3,14 +3,14 @@
 % You can adapt this file completely to your liking, but it should at least
 % contain the root `toctree` directive.
 
-# Welcome to hello's documentation!
+# ようこそハロー
 
 ```{toctree}
 :maxdepth: 2
 :caption: Contents
 ```
 
-## Indices and tables
+## 索引と検索
 
 * {ref}`genindex`
 * {ref}`modindex`
