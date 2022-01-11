@@ -37,6 +37,17 @@
                 }
             },
             "problemMatcher": [],
-        }
+        },
+        {
+            "label": "sphinx-build(en)",
+            "type": "shell",
+            "command": ".venv/Scripts/sphinx-build.exe docs _build/en -D language=en -A language=en",
+            "options": {
+                "env": {
+                    "PATH": "${workspaceFolder}\\.venv\\Scripts;${env:PATH}"
+                }
+            },
+            "problemMatcher": [],
+        },
     ]
 }

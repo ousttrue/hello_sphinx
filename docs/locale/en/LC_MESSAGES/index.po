@@ -19,15 +19,15 @@ msgstr ""
 
 #: ../../index.md:8
 msgid "Contents"
-msgstr ""
+msgstr "中身"
 
 #: ../../index.md:6
 msgid "ようこそハロー"
-msgstr ""
+msgstr "welcome hello"
 
 #: ../../index.md:13
 msgid "索引と検索"
-msgstr ""
+msgstr "index and search"
 
 #: ../../index.md:15
 msgid "{ref}`genindex`"
