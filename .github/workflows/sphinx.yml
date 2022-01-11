@@ -1,0 +1,27 @@
+name: Sphinx
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      ACTIONS_ALLOW_UNSECURE_COMMANDS: true
+    steps:
+      - uses: actions/checkout@v1
+      - run: sudo apt install gettext
+      - run: pip install -r requirements.txt # venv の pip をすべてインストール
+      - name: sphinx build(ja)
+        run: sphinx-build docs _build
+      - name: sphinx build(en) # 英語版がある場合のみ
+        run: sphinx-build docs _build/en -D language=en -A language=en
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_build # sphinx の出力を gh-pages branch に送り込む
+
